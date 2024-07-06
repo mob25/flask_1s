@@ -9,7 +9,6 @@ def index():
     img = '/static/images/baasploa.jpg'
     href = '/baasploa'
     model = 'Кроссовки BAASPLOA'
-
     return render_template("index.html", title = title, img = img, href = href, model = model)
 
 

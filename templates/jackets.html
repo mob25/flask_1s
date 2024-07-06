@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}Категория - куртки{% endblock %}
+{% block title %}{{title}}{% endblock %}
 
-{% block body %}<h2>Куртки</h2>{% endblock %}
+{% block body %}
+{% for jacket in jackets_list %}
+    <div class="card" style="width: 38rem;">
+        <div class="card-body">
+            <h4 class="card-title">{{jacket['model']}}</h4>
+            <p class="card-text">Размер: {{jacket['size']}}</p>
+            <p class="card-text">Цена: {{jacket['price']}} рублей</p>
+            
+        </div>
+    </div>
+    {%endfor%}
+
+{% endblock %}

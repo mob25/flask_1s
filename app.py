@@ -5,7 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    title = 'Главная'
+    img = '/static/images/baasploa.jpg'
+    href = '/baasploa'
+    model = 'Кроссовки BAASPLOA'
+
+    return render_template("index.html", title = title, img = img, href = href, model = model)
 
 
 @app.route('/jeans')
